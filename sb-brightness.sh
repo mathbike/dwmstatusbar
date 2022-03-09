@@ -2,12 +2,15 @@
 
 # sb-brightness
 
-brii() {
+b4() {
 	cat "/sys/class/backlight/intel_backlight/actual_brightness"
 }
+b3=$(b4)
 
-bri=$(brii)
-b=expr $(bri) / 240
+b2() {
+	echo `expr $b3 / 240`
+}
+b1=$(b2)
 
-printf "[ bri:$b%% ]"
+printf "[ bri:$b1%% ]"
 
