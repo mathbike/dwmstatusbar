@@ -8,5 +8,5 @@ batt() {
 
 bat=$(batt)
 
-printf "[ $bat ]"
+printf "[ bat:$bat%% ]"
 
